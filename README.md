@@ -59,9 +59,9 @@ Methods which you can use
 | [`getStatesByCountry(countryCode: str)`](#getstatesbycountrycountrycode-str) | Return states by Country code | [`IState[]`](#getallcountries) |
 | [`getStateByKeyValue(key: IStateUniqueKeys, value: str)`](#getstatebykeyvaluekey-istateuniquekeys-value-str) | Return state by any specified code | [`IState`](#getallcountries) |
 | [`getAllCities()`](#getallcities) | Return all Cities | [`ICity[]`](#getallcountries) |
-| [`getCityByKeyValue(key: ICityUniqueKeys, value: str)`](#getstatesbycountrycountrycode-str) | Return city by any specified code | [`ICity`](#getallcountries) |
-| [`getCitiesByCountry(countryCode: str)`](#getstatesbycountrycountrycode-str) | Return cities by Country code | [`ICity[]`](#getallcountries) |
-| [`getCitiesByCountryAndState(countryCode: str, stateCode: str)`](#getstatebykeyvaluekey-istateuniquekeys-value-str) | Return cities by any country and state code | [`ICity[]`](#getallcountries) |
+| [`getCityByKeyValue(key: ICityUniqueKeys, value: str)`](#getcitybykeyvaluekey-icityuniquekeys-value-str) | Return city by any specified code | [`ICity`](#getallcountries) |
+| [`getCitiesByCountry(countryCode: str)`](#getcitiesbycountrycountrycode-str) | Return cities by Country code | [`ICity[]`](#getallcountries) |
+| [`getCitiesByCountryAndState(countryCode: str, stateCode: str)`](#getcitiesbycountryandstatecountrycode-str-statecode-str) | Return cities by country and state code | [`ICity[]`](#getallcountries) |
 
 ## API
 
@@ -310,5 +310,96 @@ let cityList = getCitiesByCountryAndState("US", 'FL');
     }
     ...
 ]
+
+```
+
+## Types
+
+### ICountry
+```javascript
+
+export interface ICountry {
+    name: string;
+    iso2: string;
+    iso3: string;
+    isoNumeric: string;
+    phoneCode: string;
+    currency: string;
+    continent: string;
+    capital: string;
+}
+
+```
+
+### ICountryUniqueKeys
+```javascript
+
+export type ICountryUniqueKeys = 'iso2' | 'iso3' | 'isoNumeric';
+
+```
+
+### ICountryKeys
+```javascript
+
+export type ICountryKeys = 'name' | 'iso2' | 'iso3' | 'isoNumeric' | 'phoneCode' | 'currency' | 'continent' | 'capital';
+
+```
+
+### IState
+```javascript
+
+export interface IState {
+    code: string;
+    name: string;
+    cCode: string;
+    pCode: string;
+    lat: string;
+    lng: string;
+    tZone: string;
+}
+
+```
+
+### IStateUniqueKeys
+```javascript
+
+export type IStateUniqueKeys = 'code';
+
+```
+
+### IStateKeys
+```javascript
+
+export type IStateKeys = 'code' | 'name' | 'cCode' | 'pCode' | 'lat' | 'lat' | 'tZone';
+
+```
+
+### ICity
+```javascript
+
+export interface ICity {
+    code: string;
+    name: string;
+    cCode: string;
+    sCode: string;
+    pCode: string;
+    lat: string;
+    lng: string;
+    tZone: string;
+}
+
+```
+
+### ICityUniqueKeys
+```javascript
+
+export type ICityUniqueKeys = 'code';
+
+```
+
+### ICityKeys
+```javascript
+
+export type ICityKeys = 'code' | 'name' | 'cCode' | 'sCode' | 'pCode' | 'lat' | 'lat' | 'tZone';
 
 ```
