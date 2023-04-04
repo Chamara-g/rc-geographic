@@ -71,6 +71,32 @@ let countryList = getAllCountries();
 
 [
     {
+        "capital": "Kabul",
+        "continent": "Asia",
+        "currency": "Afghani",
+        "iso2": "AF",
+        "iso3": "AFG",
+        "isoNumeric": "004",
+        "name": "Afghanistan",
+        "phoneCode": "93"
+    }
+    ...
+]
+```
+
+### getCountryByCode(countryCode: str)
+
+Return country by Country code
+
+countryCode: <b>ISO2 Code</b>
+return type: <b>json | ICountry</b>
+
+```javascript
+import { getCountryByCode } from 'rc-geographic';
+
+let country = getCountryByCode("AF");
+
+{
     "capital": "Kabul",
     "continent": "Asia",
     "currency": "Afghani",
@@ -79,7 +105,5 @@ let countryList = getAllCountries();
     "isoNumeric": "004",
     "name": "Afghanistan",
     "phoneCode": "93"
-    }
-    ...
-]
+}
 ```
