@@ -26,6 +26,7 @@
   - [Browser Support](#browser-support)
   - [Installing](#installing)
     - [Package manager](#package-manager)
+  - [Documentation](#documentation)
 
 ## Features
 
@@ -40,8 +41,6 @@
 --- | --- | --- | --- | --- | --- |
 Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | 11 ✔ |
 
-[![Browser Matrix](https://saucelabs.com/open_sauce/build_matrix/axios.svg)](https://saucelabs.com/u/axios)
-
 ## Installing
 
 ### Package manager
@@ -51,3 +50,36 @@ Using npm:
 ```bash
 $ npm install rc-geographic
 ```
+
+## Documentation
+
+### getAllCountries()
+<p>Returns all Countries</p>
+<p>return type: <b>json | ICountry[]</b></p>
+
+```
+// ICountry Object
+{
+  "capital": "Kabul",
+  "continent": "Asia",
+  "currency": "Afghani",
+  "iso2": "AF",
+  "iso3": "AFG",
+  "isoNumeric": "004",
+  "name": "Afghanistan",
+  "phoneCode": "93"
+}
+```
+
+
+## Development Guide
+
+### Branching strategy
+
+- **master** : production
+- **staging** : production ready
+  - fix/{id}-{name} : hotfix
+- **develop** : stable development
+  - feature/{id}-{name} : feature
+  - fix/{id}-{name} : fix
+  - refactor/{id}-{name} : refactor
