@@ -52,16 +52,16 @@ Methods which you can use
 
 | Function  |  | Return |
 | --- | --- | --- |
-| [`getAllCountries()`](#getallcountries) | Return all countries | [`ICountry[]`](#getallcountries) |
-| [`getCountryByCode(countryCode: str)`](#getcountrybycodecountrycode-str) | Return country by Country code | [`ICountry`](#getallcountries) |
-| [`getCountryByKeyValue(key: ICountryUniqueKeys, value: str)`](#getcountrybykeyvaluekey-icountryuniquekeys-value-str) | Return country by any specified code | [`ICountry`](#getallcountries) |
-| [`getAllStates()`](#getallstates) | Return all States | [`IState[]`](#getallcountries) |
-| [`getStatesByCountry(countryCode: str)`](#getstatesbycountrycountrycode-str) | Return states by Country code | [`IState[]`](#getallcountries) |
-| [`getStateByKeyValue(key: IStateUniqueKeys, value: str)`](#getstatebykeyvaluekey-istateuniquekeys-value-str) | Return state by any specified code | [`IState`](#getallcountries) |
-| [`getAllCities()`](#getallcities) | Return all Cities | [`ICity[]`](#getallcountries) |
-| [`getCityByKeyValue(key: ICityUniqueKeys, value: str)`](#getcitybykeyvaluekey-icityuniquekeys-value-str) | Return city by any specified code | [`ICity`](#getallcountries) |
-| [`getCitiesByCountry(countryCode: str)`](#getcitiesbycountrycountrycode-str) | Return cities by Country code | [`ICity[]`](#getallcountries) |
-| [`getCitiesByCountryAndState(countryCode: str, stateCode: str)`](#getcitiesbycountryandstatecountrycode-str-statecode-str) | Return cities by country and state code | [`ICity[]`](#getallcountries) |
+| [`getAllCountries()`](#getallcountries) | Return all countries | [`ICountry[]`](#icountry) |
+| [`getCountryByCode(countryCode: str)`](#getcountrybycodecountrycode-str) | Return country by Country code | [`ICountry`](#icountry) |
+| [`getCountryByKeyValue(key: ICountryUniqueKeys, value: str)`](#getcountrybykeyvaluekey-icountryuniquekeys-value-str) | Return country by any specified code | [`ICountry`](#icountry) |
+| [`getAllStates()`](#getallstates) | Return all States | [`IState[]`](#istate) |
+| [`getStatesByCountry(countryCode: str)`](#getstatesbycountrycountrycode-str) | Return states by Country code | [`IState[]`](#istate) |
+| [`getStateByKeyValue(key: IStateUniqueKeys, value: str)`](#getstatebykeyvaluekey-istateuniquekeys-value-str) | Return state by any specified code | [`IState`](#istate) |
+| [`getAllCities()`](#getallcities) | Return all Cities | [`ICity[]`](#icity) |
+| [`getCityByKeyValue(key: ICityUniqueKeys, value: str)`](#getcitybykeyvaluekey-icityuniquekeys-value-str) | Return city by any specified code | [`ICity`](#icity) |
+| [`getCitiesByCountry(countryCode: str)`](#getcitiesbycountrycountrycode-str) | Return cities by Country code | [`ICity[]`](#icity) |
+| [`getCitiesByCountryAndState(countryCode: str, stateCode: str)`](#getcitiesbycountryandstatecountrycode-str-statecode-str) | Return cities by country and state code | [`ICity[]`](#icity) |
 
 ## API
 
