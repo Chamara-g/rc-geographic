@@ -52,3 +52,9 @@ Methods which you can use
 |  getAllCountries()       | Return all countries                       |
 |  getCountryByCode()      | Return country by Country code             |
 |  getCountryByKeyValue()  | Return country by any specified code       |
+
+|  |  |  |
+| --- | --- | --- |
+| [`getAllCountries()`](#getallcountries) | Return all countries |
+| [`getCountryByCode()`](#getcountrybycode) | Return country by Country code |
+| [`getCountryByKeyValue()`](#getcountrybykeyvalue) | Return country by any specified code |
