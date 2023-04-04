@@ -53,8 +53,11 @@ Methods which you can use
 | Function  |  | Return |
 | --- | --- | --- |
 | [`getAllCountries()`](#getallcountries) | Return all countries | [`ICountry[]`](#getallcountries) |
-| [`getCountryByCode(countryCode: str)`](#getcountrybycodecountrycode-str) | Return country by Country code | [`ICountry`](#getallcountries) | null |
-| [`getCountryByKeyValue(key: ICountryUniqueKeys, value: str)`](#getcountrybykeyvalue) | Return country by any specified code | [`ICountry`](#getallcountries) | null |
+| [`getCountryByCode(countryCode: str)`](#getcountrybycodecountrycode-str) | Return country by Country code | [`ICountry`](#getallcountries) |
+| [`getCountryByKeyValue(key: ICountryUniqueKeys, value: str)`](#getcountrybykeyvaluekey-icountryuniquekeys-value-str) | Return country by any specified code | [`ICountry`](#getallcountries) |
+| [`getAllStates()`](#getallstates) | Return all States | [`IState[]`](#getallcountries) |
+| [`getStatesByCountry(countryCode: str)`](#getstatebycodecountrycode-str) | Return states by Country code | [`IState[]`](#getallcountries) |
+| [`getStateByKeyValue(key: IStateUniqueKeys, value: str)`](#getcountrybykeyvaluekey-icountryuniquekeys-value-str) | Return state by any specified code | [`IState`](#getallcountries) |
 
 ## API
 
@@ -127,5 +130,78 @@ let country = getCountryByKeyValue("iso3", "AFG");
     "isoNumeric": "004",
     "name": "Afghanistan",
     "phoneCode": "93"
+}
+```
+
+### getAllStates()
+
+Return all states
+
+return type: <b>json | IState[]</b>
+
+```javascript
+import { getAllStates } from 'rc-geographic';
+
+let stateList = getAllStates();
+
+[
+    {
+        "cCode": "US",
+        "code": "MD",
+        "lat": "39.00039",
+        "lng": "-76.74997",
+        "name": "Maryland",
+        "pCode": "",
+        "tZone": "America/New_York"
+    }
+    ...
+]
+```
+
+### getStatesByCountry(countryCode: str)
+
+Return states by ISO2 Country code
+
+return type: <b>json | IState[]</b>
+
+```javascript
+import { getStatesByCountry } from 'rc-geographic';
+
+let stateList = getStatesByCountry("US");
+
+[
+    {
+        "cCode": "US",
+        "code": "MD",
+        "lat": "39.00039",
+        "lng": "-76.74997",
+        "name": "Maryland",
+        "pCode": "",
+        "tZone": "America/New_York"
+    }
+    ...
+]
+
+```
+
+### getStateByKeyValue(key: IStateUniqueKeys, value: str)
+
+Return state by any specified code
+
+return type: <b>json | IState</b>
+
+```javascript
+import { getStateByKeyValue } from 'rc-geographic';
+
+let state = getStateByKeyValue("code", "MD");
+
+{
+    "cCode": "US",
+    "code": "MD",
+    "lat": "39.00039",
+    "lng": "-76.74997",
+    "name": "Maryland",
+    "pCode": "",
+    "tZone": "America/New_York"
 }
 ```
