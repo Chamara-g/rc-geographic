@@ -25,7 +25,7 @@
   - [Features](#features)
   - [Browser Support](#browser-support)
   - [Installing](#installing)
-  - [Documentation](#documentation)
+  - [API Summary](#api-summary)
 
 ## Features
 
@@ -46,41 +46,9 @@ Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | 11 ✔ |
 $ npm install rc-geographic
 ```
 
-## Documentation
+## API Summary
 
-### getAllCountries()
-<p>Returns all Countries</p>
-<p>return type: <b>json | ICountry[]</b></p>
-
-```
-[
-    {
-        "capital": "Kabul",
-        "continent": "Asia",
-        "currency": "Afghani",
-        "iso2": "AF",
-        "iso3": "AFG",
-        "isoNumeric": "004",
-        "name": "Afghanistan",
-        "phoneCode": "93"
-    }
-    ...
-]
-```
-
-### getCountryByCode(countryCode)
-<p>Accept Iso2 Country Code and return Country Data</p>
-<p>return type: <b>json | ICountry</b></p>
-
-```
-{
-    "capital": "Kabul",
-    "continent": "Asia",
-    "currency": "Afghani",
-    "iso2": "AF",
-    "iso3": "AFG",
-    "isoNumeric": "004",
-    "name": "Afghanistan",
-    "phoneCode": "93"
-}
-```
+Methods which you can use
+|  getAllCountries()       | Return all countries                       |
+|  getCountryByCode()      | Return country by Country code             |
+|  getCountryByKeyValue()  | Return country by any specified code       |
