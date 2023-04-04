@@ -49,12 +49,37 @@ $ npm install rc-geographic
 ## API Summary
 
 Methods which you can use
-|  getAllCountries()       | Return all countries                       |
-|  getCountryByCode()      | Return country by Country code             |
-|  getCountryByKeyValue()  | Return country by any specified code       |
 
-|  |  |  |
-| --- | --- | --- |
+|  |  |
+| --- | --- |
 | [`getAllCountries()`](#getallcountries) | Return all countries |
 | [`getCountryByCode()`](#getcountrybycode) | Return country by Country code |
 | [`getCountryByKeyValue()`](#getcountrybykeyvalue) | Return country by any specified code |
+
+## API
+
+### getAllCountries()
+
+Return all countries
+
+return type: <b>json | ICountry[]</b>
+
+```javascript
+import { getAllCountries } from 'rc-geographic';
+
+let countryList = getAllCountries();
+
+[
+    {
+    "capital": "Kabul",
+    "continent": "Asia",
+    "currency": "Afghani",
+    "iso2": "AF",
+    "iso3": "AFG",
+    "isoNumeric": "004",
+    "name": "Afghanistan",
+    "phoneCode": "93"
+    }
+    ...
+]
+```
