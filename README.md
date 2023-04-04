@@ -58,6 +58,10 @@ Methods which you can use
 | [`getAllStates()`](#getallstates) | Return all States | [`IState[]`](#getallcountries) |
 | [`getStatesByCountry(countryCode: str)`](#getstatesbycountrycountrycode-str) | Return states by Country code | [`IState[]`](#getallcountries) |
 | [`getStateByKeyValue(key: IStateUniqueKeys, value: str)`](#getstatebykeyvaluekey-istateuniquekeys-value-str) | Return state by any specified code | [`IState`](#getallcountries) |
+| [`getAllCities()`](#getallcities) | Return all Cities | [`ICity[]`](#getallcountries) |
+| [`getCityByKeyValue(key: ICityUniqueKeys, value: str)`](#getstatesbycountrycountrycode-str) | Return city by any specified code | [`ICity`](#getallcountries) |
+| [`getCitiesByCountry(countryCode: str)`](#getstatesbycountrycountrycode-str) | Return cities by Country code | [`ICity[]`](#getallcountries) |
+| [`getCitiesByCountryAndState(countryCode: str, stateCode: str)`](#getstatebykeyvaluekey-istateuniquekeys-value-str) | Return cities by any country and state code | [`ICity[]`](#getallcountries) |
 
 ## API
 
@@ -204,4 +208,107 @@ let state = getStateByKeyValue("code", "MD");
     "pCode": "",
     "tZone": "America/New_York"
 }
+```
+
+### getAllCities()
+
+Return all cities
+
+return type: <b>json | ICity[]</b>
+
+```javascript
+import { getAllCities } from 'rc-geographic';
+
+let cityList = getAllCities();
+
+[
+    {
+        "cCode": "US",
+        "code": "US-1",
+        "lat": "30.88296",
+        "lng": "-87.77305",
+        "name": "Bay Minette",
+        "pCode": "",
+        "sCode": "AL"
+        "tZone": "America/Chicago"
+    }
+    ...
+]
+```
+
+### getCityByKeyValue(key: ICityUniqueKeys, value: str)
+
+Return city by any specified code
+
+return type: <b>json | ICity</b>
+
+```javascript
+import { getCityByKeyValue } from 'rc-geographic';
+
+let city = getCityByKeyValue("code", "US-1");
+
+{
+    "cCode": "US",
+    "code": "US-1",
+    "lat": "30.88296",
+    "lng": "-87.77305",
+    "name": "Bay Minette",
+    "pCode": "",
+    "sCode": "AL"
+    "tZone": "America/Chicago"
+}
+```
+
+### getCitiesByCountry(countryCode: str)
+
+Return cities by ISO2 Country code
+
+return type: <b>json | ICity[]</b>
+
+```javascript
+import { getCitiesByCountry } from 'rc-geographic';
+
+let cityList = getCitiesByCountry("US");
+
+[
+    {
+        "cCode": "US",
+        "code": "US-1",
+        "lat": "30.88296",
+        "lng": "-87.77305",
+        "name": "Bay Minette",
+        "pCode": "",
+        "sCode": "AL"
+        "tZone": "America/Chicago"
+    }
+    ...
+]
+
+```
+
+### getCitiesByCountryAndState(countryCode: str, stateCode: str)
+
+Return cities by ISO2 Country code, and state code
+
+return type: <b>json | ICity[]</b>
+
+```javascript
+import { getCitiesByCountryAndState } from 'rc-geographic';
+
+let cityList = getCitiesByCountryAndState("US", 'FL');
+
+[
+    {
+        "cCode": "US",
+        "code": "US-11",
+        "lat": "28.18085",
+        "lng": "-82.68177",
+        "name": "Trinity",
+        "pCode": "",
+        "sCode": "FL"
+        "tZone": "America/New_York"
+    }
+    ...
+]
+
 ```
