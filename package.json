@@ -1,0 +1,55 @@
+{
+    "name": "rc-geographic",
+    "version": "1.0.7",
+    "description": "Dataset for Countries, Cities, and States",
+    "main": "./dist/cjs/index.js",
+    "module": "./dist/esm/index.js",
+    "sideEffects": false,
+    "files": [
+        "dist",
+        "LICENSE",
+        "README.md",
+        "package.json"
+    ],
+    "directories": {
+        "lib": "dist"
+    },
+    "keywords": [
+        "Country",
+        "State",
+        "City",
+        "Latitude",
+        "Longitude"
+    ],
+    "scripts": {
+        "build": "rm -rf dist/ && prettier --write src/ && npm run build:esm && npm run build:cjs && npm run delete-maps",
+        "build:esm": "tsc",
+        "build:cjs": "tsc --module CommonJS --outDir dist/cjs",
+        "test": "mocha -p tsconfig.json 'tests/**/*.ts'",
+        "delete-maps": "npm run delete-map-files",
+        "delete-map-files": "find ./dist -name '*.map' -delete"
+    },
+    "author": "kggcbgunarathne@gmail.com",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Chamara-g/rc-geographic"
+    },
+    "homepage": "https://github.com/Chamara-g/rc-geographic#readme",
+    "bugs": {
+        "url": "https://github.com/Chamara-g/rc-geographic/issues"
+    },
+    "devDependencies": {
+        "@types/node": "^18.15.3",
+        "@types/react": "^18.0.28",
+        "@types/react-dom": "^18.0.11",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.0.2"
+    },
+    "peerDependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    }
+}
