@@ -52,9 +52,9 @@ Methods which you can use
 
 | Function  |  | Return |
 | --- | --- | --- |
-| [`getAllCountries()`](#getallcountries) | Return all countries | ICountry[] |
-| [`getCountryByCode(countryCode: str)`](#getcountrybycodecountrycode-str) | Return country by Country code | ICountry | null |
-| [`key: ICountryUniqueKeys, value: string`](#getcountrybykeyvalue) | Return country by any specified code | ICountry | null |
+| [`getAllCountries()`](#getallcountries) | Return all countries | [`ICountry[]`](#getallcountries) |
+| [`getCountryByCode(countryCode: str)`](#getcountrybycodecountrycode-str) | Return country by Country code | [`ICountry`](#getallcountries) | null |
+| [`getCountryByKeyValue(key: ICountryUniqueKeys, value: str)`](#getcountrybykeyvalue) | Return country by any specified code | [`ICountry`](#getallcountries) | null |
 
 ## API
 
@@ -107,7 +107,7 @@ let country = getCountryByCode("AF");
 }
 ```
 
-### getCountryByKeyValue(countryCode: str)
+### getCountryByKeyValue(key: ICountryUniqueKeys, value: str)
 
 Return country by any specified code
 
