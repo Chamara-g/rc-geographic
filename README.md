@@ -26,6 +26,7 @@
   - [Browser Support](#browser-support)
   - [Installing](#installing)
   - [API Summary](#api-summary)
+  - [Types](#types)
 
 ## Features
 
