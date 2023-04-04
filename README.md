@@ -25,7 +25,6 @@
   - [Features](#features)
   - [Browser Support](#browser-support)
   - [Installing](#installing)
-    - [Package manager](#package-manager)
   - [Documentation](#documentation)
 
 ## Features
@@ -43,10 +42,6 @@ Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | 11 ✔ |
 
 ## Installing
 
-### Package manager
-
-Using npm:
-
 ```bash
 $ npm install rc-geographic
 ```
@@ -58,28 +53,34 @@ $ npm install rc-geographic
 <p>return type: <b>json | ICountry[]</b></p>
 
 ```
-// ICountry Object
-{
-  "capital": "Kabul",
-  "continent": "Asia",
-  "currency": "Afghani",
-  "iso2": "AF",
-  "iso3": "AFG",
-  "isoNumeric": "004",
-  "name": "Afghanistan",
-  "phoneCode": "93"
-}
+[
+    {
+        "capital": "Kabul",
+        "continent": "Asia",
+        "currency": "Afghani",
+        "iso2": "AF",
+        "iso3": "AFG",
+        "isoNumeric": "004",
+        "name": "Afghanistan",
+        "phoneCode": "93"
+    }
+    ...
+]
 ```
 
+### getCountryByCode(countryCode)
+<p>Accept Iso2 Country Code and return Country Data</p>
+<p>return type: <b>json | ICountry</b></p>
 
-## Development Guide
-
-### Branching strategy
-
-- **master** : production
-- **staging** : production ready
-  - fix/{id}-{name} : hotfix
-- **develop** : stable development
-  - feature/{id}-{name} : feature
-  - fix/{id}-{name} : fix
-  - refactor/{id}-{name} : refactor
+```
+{
+    "capital": "Kabul",
+    "continent": "Asia",
+    "currency": "Afghani",
+    "iso2": "AF",
+    "iso3": "AFG",
+    "isoNumeric": "004",
+    "name": "Afghanistan",
+    "phoneCode": "93"
+}
+```
