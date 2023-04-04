@@ -50,11 +50,11 @@ $ npm install rc-geographic
 
 Methods which you can use
 
-|  |  |
-| --- | --- |
-| [`getAllCountries()`](#getallcountries) | Return all countries |
-| [`getCountryByCode(countryCode: str)`](#getcountrybycode) | Return country by Country code |
-| [`getCountryByKeyValue()`](#getcountrybykeyvalue) | Return country by any specified code |
+| Function  |  | Return |
+| --- | --- | --- |
+| [`getAllCountries()`](#getallcountries) | Return all countries | ICountry[] |
+| [`getCountryByCode(countryCode: str)`](#getcountrybycodecountrycode-str) | Return country by Country code | ICountry | null |
+| [`key: ICountryUniqueKeys, value: string`](#getcountrybykeyvalue) | Return country by any specified code | ICountry | null |
 
 ## API
 
@@ -86,9 +86,7 @@ let countryList = getAllCountries();
 
 ### getCountryByCode(countryCode: str)
 
-Return country by Country code
-
-countryCode: <b>ISO2 Code</b>
+Return country by ISO2 Country code
 
 return type: <b>json | ICountry</b>
 
@@ -96,6 +94,29 @@ return type: <b>json | ICountry</b>
 import { getCountryByCode } from 'rc-geographic';
 
 let country = getCountryByCode("AF");
+
+{
+    "capital": "Kabul",
+    "continent": "Asia",
+    "currency": "Afghani",
+    "iso2": "AF",
+    "iso3": "AFG",
+    "isoNumeric": "004",
+    "name": "Afghanistan",
+    "phoneCode": "93"
+}
+```
+
+### getCountryByKeyValue(countryCode: str)
+
+Return country by any specified code
+
+return type: <b>json | ICountry</b>
+
+```javascript
+import { getCountryByKeyValue } from 'rc-geographic';
+
+let country = getCountryByKeyValue("iso3", "AFG");
 
 {
     "capital": "Kabul",
