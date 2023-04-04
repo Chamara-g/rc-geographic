@@ -56,8 +56,8 @@ Methods which you can use
 | [`getCountryByCode(countryCode: str)`](#getcountrybycodecountrycode-str) | Return country by Country code | [`ICountry`](#getallcountries) |
 | [`getCountryByKeyValue(key: ICountryUniqueKeys, value: str)`](#getcountrybykeyvaluekey-icountryuniquekeys-value-str) | Return country by any specified code | [`ICountry`](#getallcountries) |
 | [`getAllStates()`](#getallstates) | Return all States | [`IState[]`](#getallcountries) |
-| [`getStatesByCountry(countryCode: str)`](#getstatebycodecountrycode-str) | Return states by Country code | [`IState[]`](#getallcountries) |
-| [`getStateByKeyValue(key: IStateUniqueKeys, value: str)`](#getcountrybykeyvaluekey-icountryuniquekeys-value-str) | Return state by any specified code | [`IState`](#getallcountries) |
+| [`getStatesByCountry(countryCode: str)`](#getstatesbycountrycountrycode-str) | Return states by Country code | [`IState[]`](#getallcountries) |
+| [`getStateByKeyValue(key: IStateUniqueKeys, value: str)`](#getstatebykeyvaluekey-istateuniquekeys-value-str) | Return state by any specified code | [`IState`](#getallcountries) |
 
 ## API
 
