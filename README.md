@@ -53,7 +53,7 @@ Methods which you can use
 |  |  |
 | --- | --- |
 | [`getAllCountries()`](#getallcountries) | Return all countries |
-| [`getCountryByCode()`](#getcountrybycode) | Return country by Country code |
+| [`getCountryByCode(countryCode: str)`](#getcountrybycode) | Return country by Country code |
 | [`getCountryByKeyValue()`](#getcountrybykeyvalue) | Return country by any specified code |
 
 ## API
@@ -89,6 +89,7 @@ let countryList = getAllCountries();
 Return country by Country code
 
 countryCode: <b>ISO2 Code</b>
+
 return type: <b>json | ICountry</b>
 
 ```javascript
