@@ -1,6 +1,6 @@
 {
     "name": "rc-geographic",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "description": "Dataset for Countries, Cities, and States",
     "main": "./dist/cjs/index.js",
     "module": "./dist/esm/index.js",
